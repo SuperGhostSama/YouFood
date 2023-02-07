@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MenuController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,12 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('/dashboard',[MenuController::class,'index']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard',[MenuController::class,'index'])->name('dashboard');
 });
+
+Route::resource('menus', MenuController::class);

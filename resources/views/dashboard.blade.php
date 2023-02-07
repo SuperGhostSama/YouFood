@@ -54,33 +54,48 @@
             </div>
             </div>
         </div>
+        
         <div class="d-flex justify-content-end">
-            <a class="btn btn-success" href=""> + Create New Product</a>
+            <a class="btn btn-success" href="{{ route('menus.create') }}"> + Create New Product</a>
         </div>
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <p>{{ $message }}</p>
+            </div>
+        @endif
         <div class="pt-5">
             <table class="table table-bordered bg-white border border-2">
                 <tr>
-                    <th>Image</th>
-                    <th>Day</th>
+                    <th>id</th>
                     <th>Menu</th>
+                    <th>Day</th>
+                    <th>Description</th>
                     <th width="280px">Action</th>
                 </tr>
+                @foreach ($menus as $menu)
                 <tr>
-                    <td><img src="" alt=""></td>
-                    <td>ttt</td>
-                    <td>ttt</td>
+                    <td>{{ ++$i }}</td>
+                    <td>{{ $menu->menu }}</td>
+                    <td>{{ $menu->day }}</td>
+                    <td>{{ $menu->description }}</td>
                     <td>
-                        <form action="" method="POST">
+                        <form action="{{ route('menus.destroy',$menu->id) }}" method="POST">
            
-            
-                            <a class="btn btn-primary" href="">Edit</a>
+                            <a class="btn btn-info" href="{{ route('menus.show',$menu->id) }}">Show</a>
+
+                            <a class="btn btn-primary" href="{{ route('menus.edit',$menu->id) }}">Edit</a>
     
-              
-                            <a class="btn btn-danger" >Delete</a>
+                            
+                            @csrf
+                            @method('DELETE')
+
+                            <button class="btn btn-danger" type="submit" >Delete</button>
                         </form>
                     </td>
                 </tr>
+                @endforeach
             </table>
+            {!! $menus->links() !!}
         </div>
     </div>
    
