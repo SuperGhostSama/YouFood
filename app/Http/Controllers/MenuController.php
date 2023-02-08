@@ -14,7 +14,6 @@ class MenuController extends Controller
      */
     public function index()
     {
-        
         $menus = Menu::latest()->paginate(5);
       
         return view('dashboard',compact('menus'))

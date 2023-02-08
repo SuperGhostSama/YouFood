@@ -32,21 +32,21 @@
     </div>
 </nav>
  <!-- Carousel -->
- <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel">
+ <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel" >
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner" >
         <div class="carousel-item active">
-            <img src="../../image/Banner1.png" class="d-block w-100" alt="..." />
+            <img src="../../image/1.jpg" class="d-block w-100" alt="..." style="height: 40rem"/>
         </div>
         <div class="carousel-item active">
-            <img src="../../image/Banner3.png" class="d-block w-100" alt="..." />
+            <img src="../../image/2.jpg" class="d-block w-100" alt="..." style="height: 40rem"/>
         </div>
         <div class="carousel-item active">
-            <img src="../../image/Banner2.png" class="d-block w-100" alt="..." />
+            <img src="../../image/3.jpg" class="d-block w-100" alt="..." style="height: 40rem"/>
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -59,6 +59,35 @@
     </button>
 </div>
 
+
+<section id="gallery">
+    <div class="container mt-3">
+        <h3 class="text-center fw-bold">Our Menus</h3>
+      <div class="row justify-content-center">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                <img src="../../../image/Menu.jpg" alt="MenuImage" class="card-img-top">{{-- image size 640x391 --}}
+                    <div class="card-body">
+                        <h5 class="card-title">MENUUU</h5>
+                        <p class="card-text">DESCRIPTIONN</p>
+                        <span class="badge text-bg-primary">LUNDII</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                <img src="../../../image/Menu.jpg" alt="MenuImage" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">MENUUU</h5>
+                        <p class="card-text">DESCRIPTIONN</p>
+                        <span class="badge text-bg-primary">LUNDII</span>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+  </div>
+  </section>
 
     
 
