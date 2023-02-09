@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Models\Menu;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +15,8 @@ use App\Http\Controllers\MenuController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function () { 
+    return view('welcome',['menus' => Menu::all()]);
 });
 
 // Route::get('/dashboard',[MenuController::class,'index']);

@@ -40,13 +40,13 @@
     </div>
     <div class="carousel-inner" >
         <div class="carousel-item active">
-            <img src="../../image/1.jpg" class="d-block w-100" alt="..." style="height: 40rem"/>
+            <img src="../../image/1.jpg" class="d-block w-100" alt="..." style="max-height: 40rem"/>
         </div>
         <div class="carousel-item active">
-            <img src="../../image/2.jpg" class="d-block w-100" alt="..." style="height: 40rem"/>
+            <img src="../../image/2.jpg" class="d-block w-100" alt="..." style="max-height: 40rem"/>
         </div>
         <div class="carousel-item active">
-            <img src="../../image/3.jpg" class="d-block w-100" alt="..." style="height: 40rem"/>
+            <img src="../../image/3.jpg" class="d-block w-100" alt="..." style="max-height: 40rem"/>
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -63,28 +63,19 @@
 <section id="gallery">
     <div class="container mt-3">
         <h3 class="text-center fw-bold">Our Menus</h3>
-      <div class="row justify-content-center">
-            <div class="col-lg-4 mb-4">
+        <div class="row justify-content-center flex-wrap">
+          @foreach ($menus as $menu)
+            <div class="col-md-4 mb-4" >
                 <div class="card">
                 <img src="../../../image/Menu.jpg" alt="MenuImage" class="card-img-top">{{-- image size 640x391 --}}
                     <div class="card-body">
-                        <h5 class="card-title">MENUUU</h5>
-                        <p class="card-text">DESCRIPTIONN</p>
-                        <span class="badge text-bg-primary">LUNDII</span>
+                        <h5 class="card-title">{{ $menu->menu }}</h5>
+                        <p class="card-text">{{ $menu->description }}</p>
+                        <span class="badge text-bg-primary">{{ $menu->day }}</span>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                <img src="../../../image/Menu.jpg" alt="MenuImage" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">MENUUU</h5>
-                        <p class="card-text">DESCRIPTIONN</p>
-                        <span class="badge text-bg-primary">LUNDII</span>
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
     </div>
   </div>
   </section>
