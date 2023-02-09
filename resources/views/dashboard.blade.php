@@ -66,7 +66,7 @@
         <div class="pt-5">
             <table class="table table-bordered bg-white border border-2">
                 <tr>
-                    <th>id</th>
+                    <th>No</th>
                     <th>Menu</th>
                     <th>Day</th>
                     <th>Description</th>
